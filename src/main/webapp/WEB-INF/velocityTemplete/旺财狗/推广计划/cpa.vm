@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> CPA计划 </title>
+  #parse("common.vm")
+  <script type="text/javascript" src="/js/旺财狗/推广计划/CPA计划/ComboBox.js"></script>
+  <script type="text/javascript" src="/js/旺财狗/推广计划/CPA计划/ComboBox2.js"></script>
+  <script type="text/javascript" src="/js/旺财狗/推广计划/CPA计划/Toolbar.js"></script>
+  <script type="text/javascript" src="/js/旺财狗/推广计划/CPA计划/Grid.js"></script>
+  <script type="text/javascript" src="/js/旺财狗/推广计划/CPA计划/OptWindow.js"></script>
+  <script type="text/javascript" src="/js/旺财狗/推广计划/CPA计划/Main.js"></script>
+ </head>
+ <body>
+	
+ </body>
+</html>

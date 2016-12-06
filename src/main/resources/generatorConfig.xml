@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+   
+  <classPathEntry location="D:/software/mysql-connector-java-5.1.36.jar" />
+  <context id="easyexchange" targetRuntime="MyBatis3">
+  <property name="javaFileEncoding" value="utf-8"/>
+  	
+    <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+    <plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin>
+    <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+    <plugin type="com.wy.adalliance.dal.mybatis.plugin.CustomModelPlugin"></plugin>
+    
+  	
+  	<!-- 关闭注解信息 -->   
+  	<commentGenerator>            
+  		<property name="suppressAllComments" value="false" />
+  	</commentGenerator>
+  	
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://172.16.81.54:3306/wyyz?characterEncoding=UTF8"
+        userId="ceshi_user"
+        password="ceshi_passwd">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.wy.adalliance.dal.mybatis.model" targetProject="adalliance\src\main\java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="mybatis.xml" targetProject="adalliance\src\main\resources">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.wy.adalliance.dal.mybatis.maps" targetProject="adalliance\src\main\java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <table tableName="user_info" >
+    	<generatedKey column="user_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    	<!-- columnOverride column="app_price" property="appPrice" javaType="com.gzt.common.lang.util.money.Money" jdbcType="DECIMAL" typeHandler="com.gzt.dal.mybatis.handers.MoneyTypeHandler"/-->
+    </table>
+    <table tableName="menu_info" >
+    	<generatedKey column="menu_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+    <!-- 差旅相关表配置 -->
+    <table tableName="cl_setting" >
+    	<generatedKey column="setting_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+    <table tableName="cl_address_book" >
+    	<generatedKey column="book_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+    <table tableName="cl_album_info" >
+    	<generatedKey column="album_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+    <table tableName="cl_guide_info" >
+    	<generatedKey column="guide_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+    <table tableName="cl_message_info" >
+    	<generatedKey column="message_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+    <table tableName="cl_order_info" >
+    	<generatedKey column="order_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+    <table tableName="superman_movie" >
+    	<generatedKey column="movie_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+    <table tableName="superman_movie_file_info" >
+    	<generatedKey column="movie_file_id" sqlStatement="SELECT UUID()"/>
+    	<ignoreColumn column="row_update_time" />
+    </table>
+  </context>
+</generatorConfiguration>

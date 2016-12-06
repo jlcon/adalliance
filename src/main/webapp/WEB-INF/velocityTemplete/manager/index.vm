@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="management">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="shortcut icon" href="/favicon.ico" >
+  <title>管理台</title>
+  #parse("common.vm") 
+  <script type="text/javascript" src="/js/manager/index.js"></script>
+ </head>
+ <body>
+ <div id="div4"/>
+ </body>
+</html>

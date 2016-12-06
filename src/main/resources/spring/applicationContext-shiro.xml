@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	default-lazy-init="true"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<description>Shiro安全配置</description>
+	
+	<bean id="logout" class="org.apache.shiro.web.filter.authc.LogoutFilter"> 
+        <property name="redirectUrl" value="/indexwyff" />
+    </bean>
+    
+<!-- 	<bean id="authenticator" class="org.apache.shiro.authc.pam.ModularRealmAuthenticator">
+		<property name="authenticationStrategy">
+			<bean class="org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy"></bean>
+		</property>
+		<property name="realms">
+			<list>
+				<bean id="shiroSvrRealm" class="com.wy.adalliance.biz.security.ShiroDataBaseRealm"></bean>
+				bean id="trustRealm" class="com.yjf.easyexchange.web.security.realms.TrustRealm"></bean
+			</list>
+		</property>
+	</bean> -->
+	<!-- 登录时与数据库交互的类 -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<!-- <property name="authenticator" ref="authenticator"></property> -->
+		<!-- <property name="sessionManager" ref="sessionManager"></property> -->
+		
+		<!--
+		<property name="shrioCacheManager" ref="cacheManager"></property>
+		-->
+		<property name="realm">
+			<bean id="shiroSvrRealm" class="com.wy.adalliance.biz.security.ShiroDataBaseRealm"></bean>
+		</property>
+	</bean>
+	
+	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+	    <property name="securityManager" ref="securityManager"/>
+	</bean>
+	
+<!-- 	<bean id="loginManager" class="com.yjf.easyexchange.service.system.impl.LoginManagerImpl"></bean> -->
+	
+	
+	<bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager"> 
+		<property name="sessionDAO" ref="sessionDAO" />
+		<property name="globalSessionTimeout" value="1800000"></property>
+		<!-- <property name="sessionListeners">
+			<list>
+				<bean id="shrioSessionListener" class="com.yjf.easyexchange.web.listener.ShrioSessionListener"></bean>
+			</list>
+		</property> -->
+    </bean>
+
+	<bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO" /> 
+	   
+	
+	<!--
+	<bean id="shrioCacheManager" class="org.apache.shiro.cache.ehcache.EhcacheManager">
+		<property name="cacheManagerConfigFile" value="classpath:cache/shiro-cache.xml"/>
+	</bean>
+	-->
+	
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+	    <property name="securityManager" ref="securityManager"/>
+	    <property name="loginUrl" value="/index.htm"/>
+	    <property name="filterChainDefinitions">
+	        <value>
+	        	/css/** = anon
+	        	/druid/** = anon
+	        	/logout = logout
+	        	/resources/** = anon
+				/js/** = anon
+				/js_dev/** = anon
+				/images/** = anon
+				/swf/** = anon
+				/services/** = anon
+	            /login.htm = anon
+	            /index.htm = anon
+	            /admin.* = authc
+	            /admin/** = authc
+	            /anon/** = anon
+	            /api/** = anon
+	            /themes/** = anon
+	            /enthemes/** = anon
+	            /styles/** = anon
+				/** = authc
+	        </value>
+	    </property>
+	</bean>
+	
+	<!--  用户登录Cuser本地缓存-->
+	<bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">  
+        <property name="configLocation" value="classpath:cache/shiro-cache.xml"/>  
+    </bean>  
+    <bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">  
+        <property name="cacheManager" ref="cacheManagerFactory"/>
+    </bean> 
+	
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+</beans>

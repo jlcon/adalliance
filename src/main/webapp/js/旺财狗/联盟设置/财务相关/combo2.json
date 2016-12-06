@@ -1,0 +1,23 @@
+{
+	totalCount:20,
+	result:[
+		{key:'1号',value:'站长名称'},
+		{key:'2号',value:'站长ID'},
+		{key:'3号',value:'联系QQ'},
+		{key:'4号',value:'属于客服'},
+		{key:'5号',value:'收款人'},
+		{key:'6号',value:'查询下线'},
+		{key:'7号',value:'查询下线'},
+		{key:'8号',value:'查询下线'},
+		{key:'9号',value:'查询下线'},
+		{key:'10号',value:'查询下线'},
+		{key:'11号',value:'查询下线'},
+		{key:'12号',value:'查询下线'},
+		{key:'13号',value:'查询下线'},
+		{key:'14号',value:'查询下线'},
+		{key:'15号',value:'查询下线'},
+		{key:'16号',value:'查询下线'},
+		{key:'17号',value:'查询下线'},
+		{key:'18号',value:'查询下线'},
+		{key:'31号',value:'查询下线'}
+]}

@@ -1,0 +1,10 @@
+{
+	totalCount:20,
+	result:[
+		{key:'站长名称',value:'站长名称'},
+		{key:'站长ID',value:'站长ID'},
+		{key:'联系QQ',value:'联系QQ'},
+		{key:'属于客服',value:'属于客服'},
+		{key:'收款人',value:'收款人'},
+		{key:'查询下线',value:'查询下线'}
+]}

@@ -1,0 +1,14 @@
+<link href="/css/ext-theme-classic/build/resources/ext-theme-classic-all.css" rel="stylesheet" />
+<!--link href="/css/ext-theme-classic/build/resources/ext-theme-classic-all.css" rel="stylesheet" /-->
+<!--link href="/css/ext-theme-crisp/build/resources/ext-theme-crisp-all.css" rel="stylesheet" /-->
+<link href="/css/sysicon.css" rel="stylesheet" />
+<!--style type="text/css">
+    *{font-size:12px!important;}
+</style-->
+<script type="text/javascript" src="/js/ext-all.js"></script>
+<script type="text/javascript" src="/js/ext-locale-zh_CN.js"></script>
+<script type="text/javascript" src="/js/common/alert.js"></script>
+<script type="text/javascript" src="/js/common/MaskFix.js"></script>
+<script type="text/javascript">
+	var pageSize = 50;
+</script>

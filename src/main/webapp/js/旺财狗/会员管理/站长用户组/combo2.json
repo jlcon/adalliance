@@ -1,0 +1,10 @@
+{
+	totalCount:20,
+	result:[
+		{key:'所有分组',value:'所有分组'},
+		{key:'普通站长',value:'普通站长'},
+		{key:'高级站长',value:'高级站长'},
+		{key:'VIP站长',value:'VIP站长'},
+		{key:'联盟站长',value:'收款人'},
+		{key:'作弊站长',value:'查询下线'}
+]}

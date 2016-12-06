@@ -1,0 +1,11 @@
+{
+	totalCount:20,
+	result:[
+		{key:'星期一',value:'站长名称'},
+		{key:'星期二',value:'站长ID'},
+		{key:'星期三',value:'联系QQ'},
+		{key:'星期四',value:'属于客服'},
+		{key:'星期五',value:'收款人'},
+		{key:'星期六',value:'查询下线'},
+		{key:'星期日',value:'查询下线'}
+]}
