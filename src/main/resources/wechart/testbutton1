@@ -1,0 +1,58 @@
+{
+	"button": [
+				{
+					"name": "查询/提现",
+					"sub_button": [
+					{
+						"type": "view",
+						"name": "外币余额",
+						"url": "http://mpay.yijifu.net/protal/register.html"
+					},
+					{
+						"type": "view",
+						"name": "测试获取OpenID",
+						"url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd7c999686574d0b9&redirect_uri=http%3A%2F%2Ffx.yijifu.net%2Fanon%2Fwechat%2FgetUserOpenId.htm&response_type=code&scope=snsapi_base#wechat_redirect"
+					},
+					{
+						"type": "view",
+						"name": "人民币余额",
+						"url": "http://mpay.yijifu.net/protal/activeUser/index.html"
+					},
+					{
+						"type": "view",
+						"name": "实时汇率",
+						"url": "http://mpay.yijifu.net/protal/profiles.html"
+					},
+					{
+						"type": "view",
+						"name": "我要提现",
+						"url": "http://yiji.com/"
+					}]
+				},{
+					"name": "投资理财",
+					"sub_button": [
+					{
+						"type": "view",
+						"name": "优选产品",
+						"url": "http://mpay.yijifu.net/protal/register.html"
+					},
+					{
+						"type": "view",
+						"name": "我的投资",
+						"url": "http://mpay.yijifu.net/protal/activeUser/index.html"
+					}]
+				},{
+					"name": "了解我们",
+					"sub_button": [
+					{
+						"type": "view",
+						"name": "产品介绍",
+						"url": "http://mpay.yijifu.net/protal/register.html"
+					},
+					{
+						"type": "view",
+						"name": "联系我们",
+						"url": "http://mpay.yijifu.net/protal/activeUser/index.html"
+					}]
+				}]
+	}

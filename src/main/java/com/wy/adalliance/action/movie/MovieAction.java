@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller
-@RequestMapping("/movie")
+@RequestMapping("/movie") 
 public class MovieAction {
 	
 	@RequestMapping("/toPage")

@@ -1,0 +1,58 @@
+{
+	"button": [
+				{
+					"name": "宝妈时光",
+					"sub_button": [
+					{
+						"type": "view",
+						"name": "江路余额",
+						"url": "http://mpay.yijifu.net/protal/register.html"
+					},
+					{
+						"type": "view",
+						"name": "测试获取OpenID",
+						"url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd7c999686574d0b9&redirect_uri=http%3A%2F%2Ffx.yijifu.net%2Fanon%2Fwechat%2FgetUserOpenId.htm&response_type=code&scope=snsapi_base#wechat_redirect"
+					},
+					{
+						"type": "view",
+						"name": "宝马优选",
+						"url": "http://mpay.yijifu.net/protal/activeUser/index.html"
+					},
+					{
+						"type": "view",
+						"name": "云仓直播",
+						"url": "http://mpay.yijifu.net/protal/profiles.html"
+					},
+					{
+						"type": "view",
+						"name": "宝宝奶粉",
+						"url": "http://yiji.com/"
+					}]
+				},{
+					"name": "会员管理",
+					"sub_button": [
+					{
+						"type": "view",
+						"name": "注册会员",
+						"url": "http://mpay.yijifu.net/protal/register.html"
+					},
+					{
+						"type": "view",
+						"name": "会员激活",
+						"url": "http://mpay.yijifu.net/protal/activeUser/index.html"
+					}]
+				},{
+					"name": "了解我们",
+					"sub_button": [
+					{
+						"type": "view",
+						"name": "重庆渝欧跨境电子商务有限公司",
+						"url": "http://mpay.yijifu.net/protal/register.html"
+					},
+					{
+						"type": "view",
+						"name": "联系我们",
+						"url": "http://mpay.yijifu.net/protal/activeUser/index.html"
+					}]
+				}]
+	}
