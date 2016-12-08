@@ -1,1 +1,8 @@
-hello wechart!
+姓名：$!{name}<br>
+openid:$!{openid}<br>
+国家:$!{country}<br>
+省/直辖市:$!{province}<br>
+城市:$!{city}<br>
+语言:$!{language}<br>
+性别:$!{sex}<br>
+头像：<img src=$!{headimgurl}>

@@ -32,6 +32,7 @@ public class MovieTest extends BaseSpringContextTest{
 	@Autowired
 	private MovieServiceImpl movieServiceImpl;
 	
+	@Test
 	public void updatemovie2db(){
 		movieServiceImpl.updateMovie2db();
 	}
@@ -46,7 +47,6 @@ public class MovieTest extends BaseSpringContextTest{
 		System.out.println(mm.getMovieList());
 	}
 	
-	@Test
 	public void searchMovie(){
 		MyMovie mm = new MyMovie();
 		System.out.println(mm.searchMovie("环太平洋"));

@@ -3,6 +3,9 @@ package com.wy.adalliance.wechart;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 
 import org.apache.commons.lang.StringUtils;
@@ -16,6 +19,11 @@ import org.apache.http.util.EntityUtils;
 
 public class WechatComunication {
 
+	
+	public static String sendCommond(String url){
+		return sendCommond(url,null);
+	}
+	
 	/**
 	 * 微信操作命令发送
 	 * @param url 微信命令接收地址
@@ -25,8 +33,8 @@ public class WechatComunication {
 	public static String sendCommond(String url,String commond){
 		
 		CloseableHttpClient hc = HttpClients.createDefault();  
-		
-		HttpPost post = new HttpPost(url); 
+		System.out.println(url);
+		HttpPost post = new HttpPost(url.trim()); 
 		if(StringUtils.isNotBlank(commond)){
 			StringEntity params = new StringEntity(commond,"UTF-8");
 			post.setEntity(params); 
@@ -45,6 +53,26 @@ public class WechatComunication {
 		}
 		
 		return null;
+	}
+	
+	public static String getCommond(String url){
+		try {
+			URLConnection con = new URL(url).openConnection();
+			BufferedInputStream bis = new BufferedInputStream(con.getInputStream());
+			byte[] tmp = new byte[100];
+			int readed = 0;
+			StringBuilder sb = new StringBuilder();
+			while((readed = bis.read(tmp, 0, tmp.length))>0){
+				sb.append(new String(tmp,0,readed, "utf-8"));
+			}
+			return sb.toString();
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+			return null;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 	
 	public static String getCommandFromFile(String path){
