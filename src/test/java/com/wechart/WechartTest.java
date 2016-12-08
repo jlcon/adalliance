@@ -9,12 +9,9 @@
  */
 package com.wechart;
 
-import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.wy.adalliance.wechart.WeChart;
-import com.wy.adalliance.wechart.beans.WeChartResult;
 
 /**
  * @Filename WechartTest.java
@@ -30,19 +27,15 @@ import com.wy.adalliance.wechart.beans.WeChartResult;
  */
 public class WechartTest {
 	
-	public static String token ;
 	
 	private static WeChart weChart = new WeChart();
 	
-	@BeforeClass
-	public static void getToken(){
-		WeChartResult weChartResult = weChart.getToken();
-		token = weChartResult.getAccessToken();
-		Assert.assertNotNull(token);
+	public void buildDefaultMenu(){
+		System.out.println(weChart.buildDefaultMenu().toString());
 	}
 	
 	@Test
-	public void buildDefaultMenu(){
-		System.out.println(weChart.buildDefaultMenu(token).toString());
+	public void getCode(){
+		weChart.getCode("http://172.16.51.139/anon/wechart/hello.htm");
 	}
 }

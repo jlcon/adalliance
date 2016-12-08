@@ -5,8 +5,8 @@
 					"sub_button": [
 					{
 						"type": "view",
-						"name": "江路余额",
-						"url": "http://mpay.yijifu.net/protal/register.html"
+						"name": "江路",
+						"url": "http://172.16.51.139/anon/wechart/hello.htm"
 					},
 					{
 						"type": "view",
@@ -15,8 +15,8 @@
 					},
 					{
 						"type": "view",
-						"name": "宝马优选",
-						"url": "http://mpay.yijifu.net/protal/activeUser/index.html"
+						"name": "宝妈优选",
+						"url": "https://sina.cn/?wm=4007"
 					},
 					{
 						"type": "view",
